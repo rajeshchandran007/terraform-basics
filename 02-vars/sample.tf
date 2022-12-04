@@ -51,7 +51,7 @@ variable "ex-map" {
 }
 
 output "ex-map-output" {
-    value = "ex-map-output: ${var.ex-map[Duration]} ${var.ex-map[Timing]}"
+    value = "ex-map-output: ${var.ex-map["Duration"]} ${var.ex-map["Timing"]}"
 }
 
 
