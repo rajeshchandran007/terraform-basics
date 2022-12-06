@@ -53,13 +53,17 @@ output "ex-map" {
 }
 
 
-variable "City" {}
+variable "City" {
+    default = "Bangalore"
+}
 
 output "city" {
     value = "City name is ${var.City}"
 }
 
-variable "State" {}
+variable "State" {
+    default = "KA"
+}
 
 output "state" {
     value = "state name is ${var.State}"
