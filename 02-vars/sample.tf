@@ -58,7 +58,7 @@ variable "City" {
 }
 
 output "city" {
-    value = "City name is ${var.City}"
+    value = "City name is: ${var.City}"
 }
 
 variable "State" {
@@ -66,11 +66,8 @@ variable "State" {
 }
 
 output "state" {
-    value = "state name is ${var.State}"
+    value = "State name is: ${var.State}"
 }
-
-
-
 
 # A variable can be accessed without ${} only the variable is called. In case, if it's needed to be added with other strings or in between something, then we need to enclose them in
 # in the double quotes. Single quotes are not valid in terraform. 
