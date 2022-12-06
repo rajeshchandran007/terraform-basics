@@ -14,7 +14,7 @@ output "private_dns" {
     value   =   aws_instance.app.private_dns
 }
 
-Creates Security Group
+# Creates Security Group
 resource "aws_security_group" "allow_ssh" {
   name        = "allow_ssh"
   description = "Allow SSH inbound traffic"
