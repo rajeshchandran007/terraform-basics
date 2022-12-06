@@ -5,7 +5,7 @@ resource "aws_instance" "app" {
   vpc_security_group_ids     = [aws_security_group.allow_ssh.id]
 
   tags = {
-    Name = "MyFirstTerraformInstance"
+    Name = "TF"
   }
 }
 
