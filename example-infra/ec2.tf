@@ -9,16 +9,6 @@ resource "aws_instance" "app" {
   }
 }
 
-resource "aws_instance" "app" {
-  ami                        = "ami-0f5b45a5509d7b5f9"
-  instance_type              = "t2.micro"
-  vpc_security_group_ids     = [aws_security_group.allow_ssh.id]
-
-  tags = {
-    Name = "MyFirstTerraformInstance"
-  }
-}
-
 # Shows output on the screen
 output "private_dns" {
     value   =   aws_instance.app.private_dns
