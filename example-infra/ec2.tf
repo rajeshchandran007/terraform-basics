@@ -5,7 +5,17 @@ resource "aws_instance" "app" {
   vpc_security_group_ids     = [aws_security_group.allow_ssh.id]
 
   tags = {
-    Name = "TF"
+    Name = "tf-app"
+  }
+}
+
+resource "aws_instance" "app2" {
+  ami                        = "ami-1234"
+  instance_type              = "t2.micro"
+  # vpc_security_group_ids     = [aws_security_group.allow_ssh.id]
+
+  tags = {
+    Name = "tf-app2"
   }
 }
 
