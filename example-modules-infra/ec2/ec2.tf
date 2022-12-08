@@ -1,6 +1,6 @@
 # Creates EC2 Instance 
 resource "aws_instance" "app" {
-  ami                        = data.aws_ami.myami.image_id
+  ami                        = data.aws_ami.my_ami.image_id
   instance_type              = "t2.micro"
   vpc_security_group_ids     = [var.sg]
 
@@ -15,14 +15,7 @@ resource "aws_instance" "app" {
     host     = self.private_ip
   }
 
-#   provisioner "remote-exec" {
-#     inline = [
-#       "ansible-pull -U https://github.com/b51-clouddevops/ansible.git -e ansible_user=centos -e ansible_password=DevOps321 -e COMPONENT=mongodb -e APP_VERSION=0.0.2 -e ENV=dev roboshop-pull.yml"
-#     ]
-#   }
-
 }
-
 
 variable "sg" {}
 
