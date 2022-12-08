@@ -10,7 +10,7 @@ resource "aws_instance" "app1" {
 }
 
 resource "aws_instance" "app2" {
-  ami                        = "ami-1234"
+  ami                        = "ami-0f5b45a5509d7b5f9"
   instance_type              = "t2.micro"
   # vpc_security_group_ids     = [aws_security_group.allow_ssh.id]
 
